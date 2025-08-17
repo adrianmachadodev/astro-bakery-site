@@ -1,5 +1,7 @@
 ---
+import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
+import Products from '../components/Products.astro'
 import '../styles/global.css'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,11 +9,6 @@ import '../styles/global.css'
 ---
 
 <Layout>
-    <section class="w-full h-90 bg-amber-300"></section>
-    <section class="w-full h-90 bg-amber-300"></section>
-    <section class="w-full h-90 bg-amber-300"></section>
-    <section class="w-full h-90 bg-amber-300"></section>
-    <section class="w-full h-90 bg-amber-300"></section>
-    <section class="w-full h-90 bg-amber-300"></section>
-    <section class="w-full h-90 bg-amber-300"></section>
+    <Hero/>
+    <Products/>
 </Layout>
