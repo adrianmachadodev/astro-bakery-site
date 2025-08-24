@@ -1,5 +1,6 @@
 <header
-  class="w-full h-30 fixed top-0 flex flex-row flex-wrap justify-around items-center border bg-white border-b-neutral-800/10"
+  class="w-full h-30 fixed top-0 flex flex-row flex-wrap justify-around items-center border bg-white border-b-neutral-800/10 nav-hidden z-10"
+  id="header"
 >
   <div
     class="w-20 h-20 bg-blue-800 flex flex-row items-center text-center justify-center"
@@ -19,3 +20,26 @@
     </ul>
   </nav>
 </header>
+
+<!-- <style>
+  header.nav-hidden {
+    transition: all 0.3s ease;
+  }
+  .nav-hidden {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    height: 100px;
+  }
+</style>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const header = document.getElementById("header");
+
+    if (window.scrollY > 50) {
+      header?.classList.add("nav-hidden");
+    } else {
+      header?.classList.remove("nav-hidden");
+    }
+  });
+</script> -->
