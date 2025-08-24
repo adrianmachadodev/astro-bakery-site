@@ -1,9 +1,24 @@
+---
+import { FESTIVITIES } from "../const/festivitiesProducts";
+import CardFestivities from "./CardFestivities.astro";
+---
+
 <!-- Productos para las festividades tipicas de Argentina -->
----
+<section
+  class="flex flex-col flex-wrap w-full min-h-96 bg-gradient-to-b from-sky-400 via-white to-sky-400"
+>
+  <h3 class="w-full h-10 font-[glonto] text-neutral-500 text-xl text-center">
+    Viva la patria!
+  </h3>
+  <h2 class="w-full h-10 font-[glonto] text-neutral-500 text-xl text-center">
+    Disfrutá nuestras delicias en cada celebración argentina
+  </h2>
 
----
-
-<section class="flex flex-col  w-full h-96 bg-gradient-to-b from-sky-400 via-white to-sky-400">
-<h3 class="w-full h-10 font-[glonto] text-neutral-500 text-xl text-center">Viva la patria!</h3>
-<h2 class="w-full h-10 font-[glonto] text-neutral-500 text-xl text-center">Disfrutá nuestras delicias en cada celebración argentina</h2>
+  <div class="flex flex-row justify-center gap-2 flex-wrap">
+    {
+      FESTIVITIES.map((item:any) => (
+        <CardFestivities name={item.name} image={item.image}/>
+      ))
+    }
+  </div>
 </section>
