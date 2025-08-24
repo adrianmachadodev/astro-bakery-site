@@ -1,35 +1,21 @@
-<section class="min-h-96 bg-neutral-400/5  flex flex-row flex-wrap items-center gap-2 justify-around">
-    <!-- Card 1 -->
-     <div class="w-96 min-h-72 bg-neutral-500/10 group  rounded-2xl flex flex-col items-center p-3 shadow-lg">
-        <picture class="w-72 h-40 bg-cyan-400 rounded-2xl group-hover:rotate-3 group-hover:transition-all ease-in duration-75">
-            <img src="https://www.napoleonsbakery.com/wp-content/uploads/2023/07/Napoleons-Bakery-Donuts-Pastries-scaled.jpg" class="w-full h-full object-cover rounded-2xl" alt="">
-        </picture>
-        <div class="w-72 min-h-32 ">
-            <p class="text-balance text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dignissimos ipsam, perspiciatis beatae in nihil. Ipsa nemo dolore excepturi quidem, sequi officiis omnis accusamus impedit vitae explicabo, beatae harum amet.
-            </p>
-        </div>
-     </div>
-     <!-- Card 2 -->
-     <div class="w-96 min-h-72 bg-neutral-500/10  rounded-2xl flex flex-col items-center p-3 shadow-lg">
-         <picture class="w-72 h-40 bg-cyan-400 rounded-2xl">
-            <img src="https://www.napoleonsbakery.com/wp-content/uploads/2023/07/Napoleons-Bakery-Donuts-Pastries-scaled.jpg" class="w-full h-full object-cover rounded-2xl" alt="">
-        </picture>
-        <div class="w-72 min-h-32 ">
-            <p class="text-balance text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dignissimos ipsam, perspiciatis beatae in nihil. Ipsa nemo dolore excepturi quidem, sequi officiis omnis accusamus impedit vitae explicabo, beatae harum amet.
-            </p>
-        </div>
-     </div>
-     <!-- card 3 -->
-     <div class="w-96 min-h-72 bg-neutral-500/10  rounded-2xl flex flex-col items-center p-3 shadow-lg">
-        <picture class="w-72 h-40 bg-cyan-400 rounded-2xl">
-            <img src="https://www.napoleonsbakery.com/wp-content/uploads/2023/07/Napoleons-Bakery-Donuts-Pastries-scaled.jpg" class="w-full h-full object-cover rounded-2xl" alt="">
-        </picture>
-        <div class="w-72 min-h-32 ">
-            <p class="text-balance text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dignissimos ipsam, perspiciatis beatae in nihil. Ipsa nemo dolore excepturi quidem, sequi officiis omnis accusamus impedit vitae explicabo, beatae harum amet.
-            </p>
-        </div>
-     </div>
+---
+import { PRODUCTS } from "../const/products";
+import CardProducts from "./cardProducts.astro";
+
+console.log("products", PRODUCTS);
+---
+
+<section
+  class="h-auto p-3 flex flex-row flex-wrap items-center gap-5 justify-around "
+>
+<h2 class="w-full text-center font-[bilmond] text-yellow-600">NUESTRAS TORTAS MÁS ELEGIDAS</h2>
+  {
+    PRODUCTS.map((product: any) => (
+      <CardProducts
+        name={product.name}
+        description={product.description}
+        image={product.image}
+      />
+    ))
+  }
 </section>

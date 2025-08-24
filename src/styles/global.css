@@ -1,6 +1,38 @@
 @import "tailwindcss";
 @import "tailwindcss/preflight.css" layer(base);
 
+@font-face {
+  font-family: "montreux";
+  src: url("../../public/fonts/montreux.woff2") format("woff2");
+  font-weight: 700; /* bold */
+  font-style: normal;
+  font-display: swap; /* mejora el renderizado en web */
+}
+
+@font-face {
+  font-family: "glonto";
+  src: url("../../public/fonts/glonto-regular.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; /* mejora el renderizado en web */
+}
+
+@font-face {
+  font-family: "harring";
+  src: url("../../public/fonts/harring-bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap; /* mejora el renderizado en web */
+}
+
+@font-face {
+  font-family: "bilmond";
+  src: url("../../public/fonts/bilmond-bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap; /* mejora el renderizado en web */
+}
+
+
+
 @layer base {
   h1 {
     @apply text-4xl font-bold;
@@ -11,4 +43,9 @@
   h3 {
     @apply text-2xl font-medium;
   }
+}
+
+body,
+html {
+  font-family: "harring";
 }
