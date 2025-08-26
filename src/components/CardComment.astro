@@ -1,0 +1,15 @@
+---
+interface Props {
+  user: string;
+  comment: string;
+}
+
+const {user, comment} = Astro.props;
+---
+
+<div class="w-96 h-56 bg-amber-400 rounded flex-shrink-0 snap-center">
+    <h3>{user}</h3>
+    <p>
+        "{comment}"
+    </p>
+</div>

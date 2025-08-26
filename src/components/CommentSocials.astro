@@ -1,3 +1,29 @@
-<section class="w-full h-96 bg-emerald-700">
+---
+import CardComment from "./CardComment.astro";
+import { COMMENTS } from "../const/comments";
+---
 
+<section class="w-full min-h-96 bg-emerald-700 flex flex-row">
+    <!-- TESTIMONIAL -->
+     <div class="w-full h-16 bg-amber-500 flex flex-col justify-center items-center">
+        <h3>Testimonios</h3>
+        <h3>Testimonios</h3>
+     </div>
 </section>
+
+
+<!-- <script>
+  const carousel = document.getElementById("carousel");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+
+  const scroll = 310;
+
+  next?.addEventListener("click", () => {
+    carousel?.scrollBy({ left: scroll, behavior: "smooth" });
+  });
+
+  prev?.addEventListener("click", () => {
+    carousel?.scrollBy({ left: -scroll, behavior: "smooth" });
+  });
+</script> -->
