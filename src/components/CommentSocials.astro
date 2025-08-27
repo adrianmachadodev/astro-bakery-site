@@ -3,21 +3,76 @@ import CardComment from "./CardComment.astro";
 import { COMMENTS } from "../const/comments";
 ---
 
-<section class="w-full min-h-96 bg-emerald-700 flex flex-row">
-    <!-- TESTIMONIAL -->
-     <div class="w-full h-16 bg-amber-500 flex flex-col justify-center items-center">
-        <h3>Testimonios</h3>
-        <h3>Testimonios</h3>
-     </div>
+<section
+  class="w-full min-h-96 bg-neutral-100 flex flex-row flex-wrap gap-1 justify-center relative p-6"
+>
+  <!-- TESTIMONIAL -->
+  <div class="w-full min-h-16 flex flex-col justify-center items-center">
+    <h3>Testimonios</h3>
+    <div class="flex w-96 h-20 bg-amber-200 mb-4 relative">
+      <div
+        id="prev"
+        class="absolute left-2 -translate-y-0 w-12 h-12 flex items-center justify-center rounded-full cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-move-left-icon lucide-move-left"
+          ><path d="M6 8L2 12L6 16"></path><path d="M2 12H22"></path></svg
+        >
+      </div>
+      <div
+        id="next"
+        class="absolute right-2 -translate-y-0 w-12 h-12 bg-neutral-400/45 flex items-center justify-center rounded-full cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-move-right-icon lucide-move-right"
+          ><path d="M18 8L22 12L18 16"></path><path d="M2 12H22"></path></svg
+        >
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="carousel"
+    class="flex flex-col flex-wrap w-auto h-80 shadow-xl/30 gap-1 overflow-x-scroll scroll-smooth scrollbar-none hide-scroll relative rounded"
+  >
+    {
+      COMMENTS.map((item: any) => (
+        <CardComment user={item.user} comment={item.comment} />
+      ))
+    }
+  </div>
 </section>
 
+<style>
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+</style>
 
-<!-- <script>
+<script>
   const carousel = document.getElementById("carousel");
   const prev = document.getElementById("prev");
   const next = document.getElementById("next");
 
-  const scroll = 310;
+  const scroll = 760;
 
   next?.addEventListener("click", () => {
     carousel?.scrollBy({ left: scroll, behavior: "smooth" });
@@ -26,4 +81,4 @@ import { COMMENTS } from "../const/comments";
   prev?.addEventListener("click", () => {
     carousel?.scrollBy({ left: -scroll, behavior: "smooth" });
   });
-</script> -->
+</script>
