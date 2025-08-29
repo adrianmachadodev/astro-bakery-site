@@ -29,4 +29,19 @@ export const COMMENTS = [
     user: "Cristina M.",
     comment: "Todo muy rico!",
   },
+   {
+    initialName: "CM",
+    user: "Cristina M.",
+    comment: "Todo muy rico!",
+  },
+   {
+    initialName: "CM",
+    user: "Cristina M.",
+    comment: "Todo muy rico!",
+  },
+   {
+    initialName: "CM",
+    user: "Cristina M.",
+    comment: "Todo muy rico!",
+  },
 ];

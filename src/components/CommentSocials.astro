@@ -7,14 +7,22 @@ import { COMMENTS } from "../const/comments";
   class="w-full min-h-96 bg-neutral-100 flex flex-row flex-wrap gap-1 justify-center p-6"
 >
   <!-- TESTIMONIAL -->
-  <div class="w-full h-5 flex flex-col justify-center items-center bg-amber-300">
-   <h3 class="font-[bilmond]">TESTIMONIOS</h3>
+  <div
+    class="w-full h-5 flex flex-col justify-center items-center "
+  >
+    <h3 class="font-[bilmond]">TESTIMONIOS</h3>
   </div>
 
-  <div class="grid w-auto min-h-56 xl:grid-cols-3 lg:grid-cols-2 content-start gap-2  flex-wrap">
+  <div
+    class="grid w-auto min-h-56 xl:grid-cols-3 lg:grid-cols-2 content-start gap-2 flex-wrap mask-b-from-6 mt-3"
+  >
     {
-      COMMENTS.map((item:any) => (
-        <CardComment user={item.user} comment={item.comment} initialName={item.initialName}/>
+      COMMENTS.map((item: any) => (
+        <CardComment
+          user={item.user}
+          comment={item.comment}
+          initialName={item.initialName}
+        />
       ))
     }
   </div>

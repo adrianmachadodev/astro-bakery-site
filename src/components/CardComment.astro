@@ -9,7 +9,7 @@ const { user, comment, initialName } = Astro.props;
 ---
 
 <div
-  class="w-96 h-32 bg-white shadow-md rounded flex flex-row flex-wrap justify-center p-3"
+  class="w-80 h-40 bg-white shadow-md rounded flex flex-row flex-wrap justify-center items-center p-3 "
 >
   <div class="w-80 h-14 flex flex-row justify-around">
     <!-- Icon profile -->
@@ -48,7 +48,7 @@ const { user, comment, initialName } = Astro.props;
 
   <!-- Body comments -->
 
-  <div class="w-80 h-20 flex flex-row justify-around mt-2">
+  <div class="w-80 h-10 flex flex-row justify-around mt-2">
     <p class="text-neutral-500 text-justify w-full font-[bilmond]">
       {comment}
     </p>
