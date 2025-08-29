@@ -1,15 +1,56 @@
 ---
 interface Props {
+  initialName: string;
   user: string;
   comment: string;
 }
 
-const {user, comment} = Astro.props;
+const { user, comment, initialName } = Astro.props;
 ---
 
-<div class="w-full h-full bg-white shadow-md rounded flex-shrink-0 snap-mandatory  snap-center">
-    <h3>{user}</h3>
-    <p>
-        "{comment}"
+<div
+  class="w-96 h-32 bg-white shadow-md rounded flex flex-row flex-wrap justify-center p-3"
+>
+  <div class="w-80 h-14 flex flex-row justify-around">
+    <!-- Icon profile -->
+    <div
+      class="w-14 h-14 rounded-full bg-red-300 flex text-center items-center justify-center"
+    >
+      {initialName}
+    </div>
+    <!-- Name profile -->
+    <div
+      class="w-32 h-14  flex text-center items-center justify-center text-neutral-500"
+    >
+      {user}
+    </div>
+    <!-- icon comments -->
+    <div class="w-10 h-14 items-center justify-center flex">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-quote-icon lucide-quote"
+        ><path
+          d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
+        ></path><path
+          d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
+        ></path></svg
+      >
+    </div>
+  </div>
+
+  <!-- Body comments -->
+
+  <div class="w-80 h-20 flex flex-row justify-around mt-2">
+    <p class="text-neutral-500 text-justify w-full font-[bilmond]">
+      {comment}
     </p>
+  </div>
 </div>
