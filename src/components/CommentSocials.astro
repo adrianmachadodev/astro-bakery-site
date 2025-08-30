@@ -4,17 +4,16 @@ import { COMMENTS } from "../const/comments";
 ---
 
 <section
-  class="w-full min-h-96 bg-neutral-100 flex flex-row flex-wrap gap-1 justify-center p-6"
+  class="w-full min-h-96 bg-neutral-100 flex flex-col flex-wrap gap-1 justify-center items-center p-6"
 >
   <!-- TESTIMONIAL -->
-  <div
-    class="w-full h-5 flex flex-col justify-center items-center "
-  >
+  <div class="w-full h-5 flex flex- justify-center items-center">
     <h3 class="font-[bilmond]">TESTIMONIOS</h3>
   </div>
 
   <div
-    class="grid w-auto min-h-56 xl:grid-cols-3 lg:grid-cols-2 content-start gap-2 flex-wrap mask-b-from-6 mt-3"
+    id="comments-container"
+    class="grid w-auto max-h-[200px] grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 content-start gap-2 flex-wrap mt-3 bg overflow-hidden transition-all duration-500 ease-in-out mask-b-from-1"
   >
     {
       COMMENTS.map((item: any) => (
@@ -26,4 +25,25 @@ import { COMMENTS } from "../const/comments";
       ))
     }
   </div>
+  <button id="btn-testimonial" class="bg-blue-400 w-20 h-10 cursor-pointer rounded-3xl mt-3"
+    >Ver más</button
+  >
 </section>
+
+<style>
+  .open-testimonials {
+    max-height: 2000px;
+    -webkit-mask-image: none; /* Safari / Chrome */
+    mask-image: none;
+  }
+</style>
+
+<script>
+  const btnTestimonial = document.getElementById("btn-testimonial");
+  const commentsContainer = document.getElementById("comments-container");
+
+  btnTestimonial?.addEventListener("click", () => {
+    console.log("click");
+    commentsContainer?.classList.toggle("open-testimonials");
+  });
+</script>
