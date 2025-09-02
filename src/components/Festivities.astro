@@ -5,20 +5,30 @@ import CardFestivities from "./CardFestivities.astro";
 
 <!-- Productos para las festividades tipicas de Argentina -->
 <section
-  class="flex flex-col flex-wrap w-full min-h-96 bg-gradient-to-b from-sky-400 via-white bg-[url('https://i.pinimg.com/736x/3c/15/ee/3c15ee6c637a884967d270f4d9120420.jpg')]"
+  class="flex flex-row flex-wrap justify-around w-full min-h-96 p-2 bg-gradient-to-b from-sky-400 via-white bg-[url('https://i.pinimg.com/736x/3c/15/ee/3c15ee6c637a884967d270f4d9120420.jpg')]"
 >
-  <h3 class="w-full h-10 font-[glonto] text-neutral-500 text-xl text-center">
-    Viva la patria!
-  </h3>
-  <h2 class="w-full h-10 font-[glonto] text-neutral-500 text-xl text-center">
-    Disfrutá nuestras delicias en cada celebración argentina
-  </h2>
-
-  <div class="flex flex-row justify-center gap-2 flex-wrap">
-    {
-      FESTIVITIES.map((item:any) => (
-        <CardFestivities name={item.name} image={item.image}/>
-      ))
-    }
+  <div
+    class="h-auto w-[500px] flex flex-col justify-center items-center"
+  >
+    <h2 class="font-[bilmond]">Desfruta de las fiestas patrias</h2>
+    <h3 class="font-[bilmond]">Con nuestros productos</h3>
+    <p class="font-[bilmond]">
+      Disfrutá nuestras delicias en cada celebración argentina
+    </p>
+    <p class="font-[bilmond]">
+      Contamos con varios productos para tu mesa
+    </p>
+  </div>
+  <div class="h-auto w-[600px] grid grid-cols-1 md:grid-cols-2">
+    <div class="w-3xs h-auto bg-amber-200">
+      <picture>
+        <img class="h-full w-full object-cover" src="../../public/images/Festivities/festivitie-1.webp" alt="">
+      </picture>
+    </div>
+    <div class="w-3xs h-auto bg-yellow-200">
+       <picture>
+        <img class="h-full w-full object-cover" src="../../public/images/Festivities/festivitie-2.webp" alt="">
+      </picture>
+    </div>
   </div>
 </section>
