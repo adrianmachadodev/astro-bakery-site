@@ -20,9 +20,9 @@ export const COMMENTS = [
     comment: "Riquisimos",
   },
   {
-    initialName: "CM",
-    user: "Cristina M.",
-    comment: "Todo muy rico!",
+    initialName: "MA",
+    user: "MariaEva",
+    comment: "😍😍",
   },
   {
     initialName: "CM",
