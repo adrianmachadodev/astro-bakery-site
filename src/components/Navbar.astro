@@ -49,11 +49,11 @@
     </ul>
   </nav>
 
-  <label class="lg:hidden" id="menu">
+  <label class="lg:hidden">
     <div
       class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
     >
-      <input class="hidden peer" type="checkbox" />
+      <input class="hidden peer" type="checkbox" id="menu" />
       <div
         class="w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"
       >
@@ -70,7 +70,7 @@
   </label>
 
   <nav
-    class="absolute bg-neutral-100 w-[100%] h-96 top-28 hidden"
+    class="absolute bg-neutral-100 w-[100%] h-96 top-28 closed-menu"
     id="navbar"
   >
     <ul>
@@ -104,22 +104,25 @@
   </nav>
 </header>
 
-<!-- <style>
-  .menu-hidden {
-    visibility: hidden;
-  }
-
+<style>
   .open-menu {
-    visibility: visible;
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    transition: all ease 1s;
   }
-</style> -->
+  .closed-menu {
+    display: none;
+  }
+</style>
 
 <script>
-  const hamburguerMenu = document.getElementById("menu") as HTMLElement;
+  const hamburguerMenu = document.getElementById("menu");
   const navbar = document.getElementById("navbar");
 
   hamburguerMenu?.addEventListener("click", () => {
-    console.log('click');
-    navbar?.classList.toggle("hidden");
+    console.log("click");
+    navbar?.classList.toggle("open-menu");
+    navbar?.classList.toggle("closed-menu");
   });
 </script>
