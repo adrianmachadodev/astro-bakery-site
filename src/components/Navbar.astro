@@ -16,34 +16,40 @@
     </span>
   </div>
 
-  <nav class="w-[30rem] h-20 justify-center items-center lg:block hidden">
+  <nav class="w-[700px] h-20 justify-center items-center lg:block hidden">
     <ul
       class="flex flex-row flex-wrap gap-3 justify-center p-0 items-center mt-7 w-full"
     >
-      <li class="w-20 text-center">
+      <li class="w-auto text-center">
         <a
           class="border-b border-b-amber-200 hover:border-amber-900 p-2"
-          href="#">Inicio</a
+          href="#home">Inicio</a
         >
       </li>
-      <li class="w-30 text-center text-balance">
+      <li class="w-auto text-center text-balance">
         <a
-          href="#"
+          href="#products"
           class="border-b border-b-amber-200 hover:border-amber-900 p-2"
         >
-          Tortas</a
-        >
-      </li>
-      <li class="w-20 text-center">
-        <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
-          href="#">Contacto</a
+          Productos Elegidos</a
         >
       </li>
-      <li class="w-20 text-center">
+      <li class="w-auto text-center">
         <a
           class="border-b border-b-amber-200 hover:border-amber-900 p-2"
-          href="#">Más</a
+          href="#variety">Variedades</a
+        >
+      </li>
+      <li class="w-auto text-center">
+        <a
+          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
+          href="#festivities">Festividades</a
+        >
+      </li>
+      <li class="w-auto text-center">
+        <a
+          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
+          href="#testimonial">Testimonios</a
         >
       </li>
     </ul>
@@ -70,34 +76,38 @@
   </label>
 
   <nav
-    class="absolute bg-neutral-100 w-[100%] h-96 top-28 closed-menu"
+    class="absolute bg-neutral-100 w-[100%] min-h-screen top-28 closed-menu"
     id="navbar"
   >
     <ul>
-      <li class="w-auto text-center">
+      <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
-          href="#">Inicio</a
+          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          href="#home">Inicio</a
         >
       </li>
-      <li class="w-auto text-center text-balance">
+      <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          href="#"
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
-        >
-          Tortas</a
+          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          href="#products">Productos Elegidos</a
         >
       </li>
-      <li class="w-auto text-center">
+      <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
-          href="#">Contacto</a
+          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          href="#variety">Variedades</a
         >
       </li>
-      <li class="w-auto text-center">
+      <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
-          href="#">Más</a
+          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          href="#festivities">Festividades</a
+        >
+      </li>
+      <li class="w-auto text-center flex justify-center items-center h-20">
+        <a
+          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          href="#testimonial">Testimonios</a
         >
       </li>
     </ul>
@@ -119,10 +129,20 @@
 <script>
   const hamburguerMenu = document.getElementById("menu");
   const navbar = document.getElementById("navbar");
+  const links = navbar?.querySelectorAll('.link-item');
 
   hamburguerMenu?.addEventListener("click", () => {
     console.log("click");
     navbar?.classList.toggle("open-menu");
     navbar?.classList.toggle("closed-menu");
   });
+  
+  links?.forEach((link:any) => {
+    link.addEventListener('click', () => {
+      console.log('click link');
+      navbar?.classList.add('closed-menu')
+    })
+  })
+
+  
 </script>

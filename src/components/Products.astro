@@ -1,14 +1,17 @@
 ---
 import { PRODUCTS } from "../const/products";
-import CardProducts from "./cardProducts.astro";
+import CardProducts from "./CardProducts.astro";
 
 console.log("products", PRODUCTS);
 ---
 
 <section
-  class="h-auto p-3 flex flex-row flex-wrap items-center gap-5 justify-around "
+  id="products"
+  class="h-auto p-3 flex flex-row flex-wrap items-center gap-5 justify-around scroll-mt-36 scroll-smooth"
 >
-<h2 class="w-full text-center font-[bilmond] text-yellow-600 mt-4">NUESTRAS TORTAS MÁS ELEGIDAS</h2>
+  <h2 class="w-full text-center font-[bilmond] text-yellow-600 mt-4">
+    NUESTRAS TORTAS MÁS ELEGIDAS
+  </h2>
   {
     PRODUCTS.map((product: any) => (
       <CardProducts

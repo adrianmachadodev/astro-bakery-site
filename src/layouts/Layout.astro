@@ -5,7 +5,7 @@ import ButtonContact from "../components/ButtonContact.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -15,11 +15,11 @@ import ButtonContact from "../components/ButtonContact.astro";
 	</head>
 	<body>
 		<Navbar/>
-		<!-- <ButtonContact/> -->
 		<main>
 			<slot />
 		</main>
 		<Footer/>
+		<ButtonContact/>
 	</body>
 </html>
 
