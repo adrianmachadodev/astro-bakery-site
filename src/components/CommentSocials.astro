@@ -8,13 +8,17 @@ import { COMMENTS } from "../const/comments";
   class="w-full min-h-96 bg-neutral-100 flex flex-col flex-wrap gap-1 justify-center items-center p-6 scroll-mt-40"
 >
   <!-- TESTIMONIAL -->
-  <div class="w-full h-5 flex flex- justify-center items-center">
+  <div
+    class="w-full h-5 flex flex- justify-center items-center"
+    data-aos="fade-up"
+  >
     <h3 class="font-[bilmond] text-yellow-600">TESTIMONIOS</h3>
   </div>
 
   <div
     id="comments-container"
     class="grid w-auto max-h-[200px] grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 content-start gap-2 flex-wrap mt-3 bg overflow-hidden transition-all duration-500 ease-in-out mask-b-from-1"
+    data-aos="fade-up"
   >
     {
       COMMENTS.map((item: any) => (
@@ -26,8 +30,10 @@ import { COMMENTS } from "../const/comments";
       ))
     }
   </div>
-  <button id="btn-testimonial" class="bg-yellow-600 text-white w-32 h-10 cursor-pointer rounded-3xl mt-3"
-    >Ver más</button
+  <button
+    id="btn-testimonial"
+    class="bg-yellow-600 text-white w-32 h-10 cursor-pointer rounded-3xl mt-3"
+    data-aos="fade-up">Ver más</button
   >
 </section>
 
