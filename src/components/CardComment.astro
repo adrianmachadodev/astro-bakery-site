@@ -11,25 +11,14 @@ const { user, comment, initialName } = Astro.props;
 <div
   class="w-80 h-40 bg-white shadow-md rounded flex flex-row flex-wrap justify-center items-center p-3 "
 >
-  <div class="w-80 h-14 flex flex-row justify-around">
-    <!-- Icon profile -->
-    <div
-      class="w-14 h-14 rounded-full bg-red-300 text-white flex text-center items-center justify-center"
-    >
-      {initialName}
-    </div>
-    <!-- Name profile -->
-    <div
-      class="w-32 h-14  flex text-center items-center justify-center text-neutral-500"
-    >
-      {user}
-    </div>
-    <!-- icon comments -->
-    <div class="w-10 h-14 items-center justify-center flex">
+  
+
+  <!-- Body comments -->
+   <div class="w-100 flex h-4 k">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -44,13 +33,27 @@ const { user, comment, initialName } = Astro.props;
         ></path></svg
       >
     </div>
-  </div>
-
-  <!-- Body comments -->
 
   <div class="w-80 h-10 flex flex-row justify-around mt-2">
     <p class="text-neutral-500 text-justify w-full font-[bilmond]">
       {comment}
     </p>
+  </div>
+
+  <div class="w-full h-14 flex flex-row justify-around">
+    <!-- Icon profile -->
+    <div
+      class="w-14 h-14 rounded-full bg-red-300 text-white flex text-center items-center justify-center"
+    >
+      {initialName}
+    </div>
+    <!-- Name profile -->
+    <div
+      class="w-32 h-14  flex text-center items-center justify-center text-neutral-500"
+    >
+      {user}
+    </div>
+    <!-- icon comments -->
+    
   </div>
 </div>
