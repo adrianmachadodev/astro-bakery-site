@@ -6,35 +6,40 @@ import CardFestivities from "./CardFestivities.astro";
 <!-- Productos para las festividades tipicas de Argentina -->
 <section
   id="festivities"
-  class="flex flex-row flex-wrap justify-around w-full min-h-96 p-2 bg-gradient-to-b via-white bg-repeat bg-cover lg:bg-contain scroll-mt-40"
+  class="flex flex-row flex-wrap justify-center items-center gap-2 w-full min-h-[600px] p-2 bg-gradient-to-b via-white scroll-mt-40"
 >
-  <div class="h-auto w-[500px] text-center text-balance flex flex-col justify-center items-center" data-aos="fade-up">
-    
-    <h2 class="font-[bilmond]">Disfruta de las fiestas patrias</h2>
-    <h3 class="font-[bilmond]">Con nuestros productos</h3>
-    <p class="font-[bilmond]">
-      Disfrutá nuestras delicias en cada celebración argentina
-    </p>
-    <p class="font-[bilmond]">Contamos con varios productos para tu mesa</p>
+  <!-- Section Images -->
+  <div class="flex w-80 h-80 items-start" data-aos="fade-up">
+    <img
+      src="../../public/images/Festivities/festivitie-1.webp"
+      class="object-contain"
+      alt=""
+    />
   </div>
-  <div class="h-auto w-[600px] grid grid-cols-1 md:grid-cols-2 gap-2"   data-aos="fade-up">
-    <div class="w-3xs h-auto bg-amber-200 rounded mx-auto">
-      <picture>
-        <img
-          class="h-full w-full object-cover rounded"
-          src="../../public/images/Festivities/festivitie-1.webp"
-          alt=""
-        />
-      </picture>
+  <!-- Section Info -->
+  <div class="flex w-[800px] h-80">
+    <div
+      class="h-auto w-full text-center text-balance flex flex-col justify-center items-center"
+      data-aos="fade-up"
+    >
+      <h2 class="font-[bilmond] text-yellow-600">
+        Celebremos juntos las Fiestas Patrias
+      </h2>
+      <h3 class="font-[bilmond]">
+        Llevá a tu mesa el auténtico sabor argentino.
+      </h3>
+      <p class="font-[bilmond]">
+        Descubrí nuestras delicias y hacé de cada celebración un momento
+        especial.
+      </p>
     </div>
-    <div class="w-3xs h-auto bg-yellow-200 rounded mx-auto">
-      <picture>
-        <img
-          class="h-full w-full object-cover rounded"
-          src="../../public/images/Festivities/festivitie-2.webp"
-          alt=""
-        />
-      </picture>
-    </div>
+  </div>
+  <!-- Section Images -->
+  <div class="flex w-80 h-80 items-end" data-aos="fade-up">
+    <img
+      src="../../public/images/Festivities/festivitie-2.webp"
+      class="object-contain"
+      alt=""
+    />
   </div>
 </section>
