@@ -16,41 +16,49 @@
     </span>
   </div>
 
-  <!-- Fixear navbar mobile -->
-
   <nav class="w-[700px] h-20 justify-center items-center lg:block hidden">
     <ul
       class="flex flex-row flex-wrap gap-3 justify-center p-0 items-center mt-7 w-full"
     >
       <li class="w-auto text-center">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full"
           href="#home">Inicio</a
         >
       </li>
       <li class="w-auto text-center text-balance">
         <a
           href="#products"
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full"
         >
           Productos Elegidos</a
         >
       </li>
       <li class="w-auto text-center">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full"
           href="#variety">Variedades</a
         >
       </li>
       <li class="w-auto text-center">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full"
           href="#festivities">Festividades</a
         >
       </li>
       <li class="w-auto text-center">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full"
           href="#testimonial">Testimonios</a
         >
       </li>
@@ -61,7 +69,7 @@
     <div
       class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center"
     >
-      <input class="hidden peer" type="checkbox" id="menu" />
+      <input id="menu" class="hidden peer" type="checkbox" />
       <div
         class="w-[50%] h-[2px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"
       >
@@ -84,31 +92,41 @@
     <ul>
       <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full link-item text-2xl"
           href="#home">Inicio</a
         >
       </li>
       <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full link-item text-2xl"
           href="#products">Productos Elegidos</a
         >
       </li>
       <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full link-item text-2xl"
           href="#variety">Variedades</a
         >
       </li>
       <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full link-item text-2xl"
           href="#festivities">Festividades</a
         >
       </li>
       <li class="w-auto text-center flex justify-center items-center h-20">
         <a
-          class="border-b border-b-amber-200 hover:border-amber-900 p-2 text-3xl link-item"
+          class="relative pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0
+            after:w-0 after:h-[2px] after:bg-yellow-600 after:transition-all after:duration-300
+            hover:after:w-full link-item text-2xl"
           href="#testimonial">Testimonios</a
         >
       </li>
@@ -131,20 +149,19 @@
 <script>
   const hamburguerMenu = document.getElementById("menu");
   const navbar = document.getElementById("navbar");
-  const links = navbar?.querySelectorAll('.link-item');
+  const links = navbar?.querySelectorAll(".link-item");
 
   hamburguerMenu?.addEventListener("click", () => {
     console.log("click");
     navbar?.classList.toggle("open-menu");
     navbar?.classList.toggle("closed-menu");
   });
-  
-  links?.forEach((link:any) => {
-    link.addEventListener('click', () => {
-      console.log('click link');
-      navbar?.classList.add('closed-menu')
-    })
-  })
 
-  
+  links?.forEach((link: any) => {
+    link.addEventListener("click", () => {
+      console.log("click link");
+      navbar?.classList.add("closed-menu");
+      if (hamburguerMenu) hamburguerMenu.checked = false;
+    });
+  });
 </script>
