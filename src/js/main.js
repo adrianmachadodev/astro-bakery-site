@@ -17,6 +17,6 @@ window.addEventListener("load", () => {
 
       // Esperar a que termine la transición antes de removerlo
       loader.addEventListener("transitionend", () => loader.remove());
-    }, 5000); // se empieza a ocultar al instante, podés ajustar
+    }, 3000); // se empieza a ocultar al instante, podés ajustar
   }
 });
