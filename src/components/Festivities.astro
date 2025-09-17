@@ -6,40 +6,33 @@ import CardFestivities from "./CardFestivities.astro";
 <!-- Productos para las festividades tipicas de Argentina -->
 <section
   id="festivities"
-  class="flex flex-row flex-wrap justify-center items-center gap-2 w-full min-h-[600px] p-2 bg-gradient-to-b via-white scroll-mt-40"
+  class="flex flex-col w-full min-h-[600px]  gap-2 scroll-mt-40"
+  
 >
-  <!-- Section Images -->
-  <div class="flex w-80 h-80 items-start" data-aos="fade-up">
-    <img
-      src="../../public/images/Festivities/festivitie-1.webp"
-      class="object-contain"
-      alt=""
-    />
+  <div
+    class="flex flex-col min-h-52 w-full  text-center justify-center"
+    data-aos="fade-up"
+  >
+    <h2 class="text-yellow-600 uppercase">Endulzá tus momentos con el auténtico sabor argentino.</h2>
+    <p class="font-[bilmond]">Pastelitos y alfajores de maicena para compartir en cada celebración.</p>
   </div>
-  <!-- Section Info -->
-  <div class="flex w-[800px] h-80">
-    <div
-      class="h-auto w-full text-center text-balance flex flex-col justify-center items-center"
-      data-aos="fade-up"
-    >
-      <h2 class="font-[bilmond] text-yellow-600">
-        Celebremos juntos las Fiestas Patrias
-      </h2>
-      <h3 class="font-[bilmond]">
-        Llevá a tu mesa el auténtico sabor argentino.
-      </h3>
-      <p class="font-[bilmond]">
-        Descubrí nuestras delicias y hacé de cada celebración un momento
-        especial.
-      </p>
+  <!-- gallery -->
+  <div class="w-full  min-h-72 flex flex-row flex-wrap justify-center gap-2 mb-5"
+  data-aos="fade-up">
+    <div class="w-96 h-72 ">
+      <picture>
+        <img src="../../public/images/Festivities/festivitie-1.webp" class="w-full h-full object-cover rounded shadow-lg" alt="">
+      </picture>
     </div>
-  </div>
-  <!-- Section Images -->
-  <div class="flex w-80 h-80 items-end" data-aos="fade-up">
-    <img
-      src="../../public/images/Festivities/festivitie-2.webp"
-      class="object-contain"
-      alt=""
-    />
+    <div class="w-96 h-72 ">
+      <picture>
+        <img src="../../public/images/Festivities/festivitie-2.webp" class="w-full h-full object-cover rounded shadow-lg" alt="">
+      </picture>
+    </div>
+    <div class="w-96 h-72 ">
+       <picture>
+        <img src="https://i.ytimg.com/vi/qB1ICj-Fy7c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAGzgCrFtM2h2BQIj2DX8eulXy7-Q" class="w-full h-full object-cover rounded shadow-lg" alt="">
+      </picture>
+    </div>
   </div>
 </section>
