@@ -9,14 +9,14 @@ const { name, description, image } = Astro.props;
 ---
 
 <div
-  class="w-96 h-[450px] group p-3 pb-3 rounded-md flex flex-col gap-2 bg-neutral-50  shadow-lg mb-5"
+  class="w-96 h-[450px] group pb-3 rounded-md flex flex-col gap-2 bg-white  shadow-lg mb-5"
 >
   
   <!-- Image -->
   <div class="w-full h-56 overflow-hidden bg-amber-300">
     <picture>
       <img
-        class="w-full h-full rounded-xs group-hover:scale-105 hover:transition-all ease-in duration-75"
+        class="w-full h-full group-hover:scale-105 hover:transition-all ease-in duration-75 object-cover"
         src={image}
         alt=""
       />
@@ -24,14 +24,14 @@ const { name, description, image } = Astro.props;
   </div>
   <!-- name  -->
   <div
-    class="w-full h-10 flex group-hover:text-yellow-700 group-hover:transition-all ease-in-out duration-150"
+    class="w-full h-10 p-3 flex group-hover:text-yellow-700 group-hover:transition-all ease-in-out duration-150"
   >
     <h3 class="font-[harring] uppercase">
       {name}
     </h3>
   </div>
   <!-- Description -->
-  <div class="w-full min-h-20 text-balance font-[bilmond] text-neutral-400 mb-2">
+  <div class="w-full min-h-20 text-balance font-[bilmond] text-neutral-400 mb-2 p-3">
     {description}
   </div>
 </div>
