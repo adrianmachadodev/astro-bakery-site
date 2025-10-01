@@ -1,6 +1,13 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+import { Pagination } from "swiper/modules";
+
+
 
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
@@ -20,3 +27,13 @@ window.addEventListener("load", () => {
     }, 3000); // se empieza a ocultar al instante, podés ajustar
   }
 });
+
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop:true,
+
+  // pagination:{
+  //   el:'.swiper-pagination'
+  // }
+})

@@ -16,35 +16,29 @@ import { COMMENTS } from "../const/comments";
     <p class="font-[bilmond]">¿Que dicen nuestros clientes?</p>
   </div>
 
-  <div
-    id="comments-container"
-    class="grid w-auto max-h-[200px] grid-cols-1 xl:grid-cols-3 lg:grid-cols-2 content-start gap-2 flex-wrap mt-3 bg overflow-hidden transition-all duration-500 ease-in-out mask-b-from-1"
-    data-aos="fade-up"
-  >
-    {
-      COMMENTS.map((item: any) => (
-        <CardComment
-          user={item.user}
-          comment={item.comment}
-          initialName={item.initialName}
-        />
-      ))
-    }
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {
+        COMMENTS.map((comment: any) => (
+          <CardComment
+            user={comment.user}
+            comment={comment.comment}
+            initialName={comment.initialName}
+          />
+        ))
+      }
+      ...
+    </div>
   </div>
-  <button
-    id="btn-testimonial"
-    class="bg-[#c78622] text-white w-32 h-10 cursor-pointer rounded-3xl mt-3"
-    data-aos="fade-up">Ver más</button
-  >
 </section>
 
 <style>
-  .open-testimonials {
-    max-height: 2000px;
-    -webkit-mask-image: none; /* Safari / Chrome */
-    mask-image: none;
-    padding-bottom: 10px;
-    transition: all ease-in 150ms;
+  .swiper {
+    width: 600px;
+    height: 300px;
+    background-color: aqua;
   }
 </style>
 
