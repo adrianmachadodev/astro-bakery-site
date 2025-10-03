@@ -8,7 +8,7 @@ interface Props {
 const { user, comment, initialName } = Astro.props;
 ---
 
-<div class="swiper-slide p-4">
+<div class="swiper-slide p-4 rounded-2xl">
   <div
     class="flex flex-column flex-wrap h-auto gap-2 items-center justify-between"
   >
@@ -37,9 +37,7 @@ const { user, comment, initialName } = Astro.props;
         </p>
       </div>
 
-      <div
-        class="w-80 h-20 text-neutral-500 flex justify-center items-center"
-      >
+      <div class="w-80 h-20 text-neutral-500 flex justify-center items-center">
         <p>
           {user}
         </p>
@@ -47,3 +45,22 @@ const { user, comment, initialName } = Astro.props;
     </div>
   </div>
 </div>
+
+<style>
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 35%;
+    height: 300px;
+    background-color: #e4e4e4ff;
+  }
+
+  .swiper-slide {
+    transition: opacity 0.3s ease;
+    opacity: 0.9;
+  }
+
+  .swiper-slide-active {
+    opacity: 1 !important;
+  }
+</style>

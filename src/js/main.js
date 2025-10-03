@@ -30,6 +30,15 @@ window.addEventListener("load", () => {
 
 
 const swiper = new Swiper('.swiper', {
+  effect:"coverflow",
+  grabCursor:true,
+  centeredSlides:true,
+  slidesPerView:"auto",
+  opacity:"50",
+  coverflowEffect: {
+    stretch:3,
+    slideShadows:false,
+  },
   direction: 'horizontal',
   loop:true,
 
