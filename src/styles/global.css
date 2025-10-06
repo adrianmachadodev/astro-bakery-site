@@ -63,4 +63,7 @@
 body,
 html {
   font-family: "harring";
+  --swiper-pagination-color: var(--color-amber-500);
 }
+
+

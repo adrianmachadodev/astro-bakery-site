@@ -9,38 +9,34 @@ const { user, comment, initialName } = Astro.props;
 ---
 
 <div class="swiper-slide p-4 rounded-2xl">
-  <div
-    class="flex flex-column flex-wrap h-auto gap-2 items-center justify-between"
-  >
-    <!-- icon section -->
-    <div class="flex flex-row h-20 w-full">
-      <div class="flex w-10 h-10 opacity-20">
-        <img src="images/svg/quote.png" alt="" />
-      </div>
-    </div>
-    <!-- comments -->
+  <!-- icon testimonial -->
+  <div class="flex flex-row w-20 h-20 mb-2">
+    <picture class="opacity-10">
+      <img src="images/svg/quote.png" alt="" />
+    </picture>
+  </div>
+  <!-- body testimonial comments and profile user -->
+  <div class="flex flex-row flex-wrap w-full h-auto">
+    <!-- comments section -->
     <div
-      class="flex flex-row items-center justify-center text-neutral-500 h-20 w-full border-b border-b-neutral-300"
+      class="w-full h-20 flex items-center justify-center text-2xl text-neutral-400"
     >
-      <p class="text-xl text-center">
-        {comment}
-      </p>
+      "{comment}"
     </div>
-    <!-- Name user -->
-    <div class="flex flex-row h-20 w-full justify-around">
-      <!-- icon user -->
-      <div
-        class="w-15 h-10 md:w-20 md:h-20 bg-amber-500 text-neutral-500 rounded-full flex justify-center items-center"
-      >
-        <p>
+    <!-- profile section -->
+    <div class="w-full flex flex-row h-20 border-t border-t-neutral-200">
+      <!-- icon and name user -->
+      <div class="flex w-60 h-auto items-center justify-center gap-1">
+        <!-- Initial name -->
+        <div
+          class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center"
+        >
           {initialName}
-        </p>
-      </div>
-
-      <div class="w-80 h-20 text-neutral-500 flex justify-center items-center">
-        <p>
-          {user}
-        </p>
+        </div>
+        <div class="w-40 h-10 text-neutral-400 font-[bilmond]">
+          <p>{user}</p>
+          <p class="text-sm">Usuario de instagram</p>
+        </div>
       </div>
     </div>
   </div>
@@ -48,9 +44,10 @@ const { user, comment, initialName } = Astro.props;
 
 <style>
   .swiper-slide {
-    width: 80%;
+    width: 90%;
     height: auto;
-    background-color: #e4e4e4ff;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
     transition: opacity 0.3s ease;
     opacity: 0.7;
   }

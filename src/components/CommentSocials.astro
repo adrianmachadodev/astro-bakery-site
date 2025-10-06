@@ -16,10 +16,10 @@ import { COMMENTS } from "../const/comments";
     <p class="font-[bilmond]">¿Que dicen nuestros clientes?</p>
   </div>
 
-  <div class="flex flex-row w-full justify-center mask-l-from-50% mask-r-from-50%" data-aos="fade-up">
+  <div class="flex flex-row w-full justify-center" data-aos="fade-up">
     <div class="swiper">
       <!-- Additional required wrapper -->
-      <div class="swiper-wrapper ">
+      <div class="swiper-wrapper" >
         <!-- Slides -->
         {
           COMMENTS.map((comment: any) => (
@@ -31,17 +31,27 @@ import { COMMENTS } from "../const/comments";
           ))
         }
       </div>
+
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
 
 <style>
   .swiper {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  padding-bottom: 2rem;
-}
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 2rem;
+  }
+
+  .swiper-wrapper {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 2rem;
+  }
+
 </style>
 
 <script>
