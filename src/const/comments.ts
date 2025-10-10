@@ -29,19 +29,24 @@ export const COMMENTS = [
     user: "Arte Dulce",
     comment: "👏👏👏",
   },
-   {
+  {
     initialName: "MC",
     user: "MartaC",
     comment: "🤗",
   },
-   {
+  {
     initialName: "LL",
     user: "Laura L",
     comment: "Exquisitooos! 👏",
   },
-   {
+  {
     initialName: "CM",
     user: "Cristina M.",
     comment: "Todo muy rico!",
+  },
+  {
+    initialName: "GS",
+    user: "Giselle",
+    comment: "Muy ricas las tartas muchas gracias!!",
   },
 ];
